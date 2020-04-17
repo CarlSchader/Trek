@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<link rel="stylesheet" type="text/css" href="#DOMAIN/public/styles/bootstrap/bootstrap.min.css">
+    <title>Trek</title>
+  </head>
+  <body>
+    <meta charset="utf-8"/>
+
+    <div class="jumbotron jumbotron-fluid">
+  	  <div class="container">
+  	    <h1 class="display-4">Welcome to Trek</h1>
+  	    <p class="lead">A travel photo sharing platform.</p>
+  	  </div>
+  	</div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="card" style="margin: 5%;">
+          <div class="card-header">
+            Sign in
+          </div>
+          <div class="card-body">
+
+            <form  action="#DOMAIN/public/signIn" method="POST" id="signIn">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <button type="submit" class="btn btn-info">Go</button>
+            </form>
+
+          </div>
+        </div>
+
+        <div class="card" style="margin: 5%;">
+          <div class="card-header">
+            New user
+          </div>
+          <div class="card-body">
+
+            <form name="newUserForm" action="#DOMAIN/public/newUser.js" method="post" id="public/newUser.js" onsubmit="return validateNewUser();" enctype="application/x-www-form-urlencoded">
+              <div class="form-group">
+                <label for="exampleInputUsername1">Username</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                  </div>
+                  <input type="text" class="form-control" id="newUsername" name="username">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="newEmail" aria-describedby="emailHelp" name="email">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" name="password" id="newPassword">
+              </div>
+              <button type="submit" id="newUserButton" class="btn btn-info">Create</button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="#DOMAIN/public/scripts/login.js"></script>
+    <script type="text/javascript" src="#DOMAIN/public/scripts/jquery/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="#DOMAIN/public/scripts/bootstrap/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

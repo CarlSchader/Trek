@@ -1,0 +1,15 @@
+{
+  "name": "trek-npm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Carl William Schader",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^3.5.5",
+    "nodemailer": "^6.4.5"
+  }
+}
