@@ -29,7 +29,9 @@ module.exports = function(request, response, templateMap) {
 		  subject: 'Trek account verification',
 		  html: emailString
 		};
-		if (database.read(mongodbConfig.userDataCollectionName, {username: bodyObject['username']}) === null || database.read(mongodbConfig.userDataCollectionName, {email: bodyObject['email']}) === null) {
+		console.log(console.log(mongodbConfig.userDataCollectionName, {username: bodyObject['username']}));
+		console.log(console.log(mongodbConfig.userDataCollectionName, {email: bodyObject['email']}));
+		if (console.log(mongodbConfig.userDataCollectionName, {username: bodyObject['username']}) === undefined || database.read(mongodbConfig.userDataCollectionName, {email: bodyObject['email']}) === undefined) {
 			transporter.sendMail(mailOptions, function(error, info) {
 				if (error) {
 					console.error(error);
