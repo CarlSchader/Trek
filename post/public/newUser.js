@@ -38,12 +38,16 @@ module.exports = function(request, response, templateMap) {
 				else {
 					try {
 						database.create(mongodbConfig.userDataCollectionName, database.createUserDataObject(bodyObject.username, bodyObject.email, bodyObject.password));
+						console.log("New user created: " + bodyObject['username']);
 					}
 					catch (error) {
 						console.log(error);
 					}
 				}
 			});
+		}
+		else {
+			console.log("Username or email already in use for", bodyObject);
 		}
 	});
 }
